@@ -6,6 +6,15 @@ import xarray as xr
 
 
 def extract_grib_vals_and_coords(gid: int) -> Tuple[np.ndarray, np.ndarray, np.ndarray]:
+    """
+    Extracts the latitude, longitude, and values from a GRIB file.
+
+    Parameters:
+        gid (int): The GRIB message identifier.
+
+    Returns:
+        Tuple[np.ndarray, np.ndarray, np.ndarray]: A tuple containing the latitude, longitude, and values arrays.
+    """
     # extract lon/lat coordinates
     nlon = eccodes.codes_get(gid, "Ni")
     nlat = eccodes.codes_get(gid, "Nj")
@@ -16,6 +25,16 @@ def extract_grib_vals_and_coords(gid: int) -> Tuple[np.ndarray, np.ndarray, np.n
 
 
 def extract_grib_params(gid: int) -> Tuple[int, int, str]:
+    """
+    Extracts the parameter ID, level, and type of level from a GRIB message.
+
+    Parameters:
+        gid (int): The GRIB message identifier.
+
+    Returns:
+        Tuple[int, int, str]: A tuple containing the parameter ID, level, and type of level.
+
+    """
     id_ = eccodes.codes_get(gid, "paramId")
     level = eccodes.codes_get(gid, "level")
     level_type = eccodes.codes_get(gid, "typeOfLevel")
@@ -23,6 +42,20 @@ def extract_grib_params(gid: int) -> Tuple[int, int, str]:
 
 
 def load_grib_dataset(files: List[str], codes: List[Union[VariableSingleLevel, VariablePressureLevel]]) -> xr.Dataset:
+    """
+    Load a GRIB dataset from a list of files and a list of variable codes.
+
+    Parameters:
+        files (List[str]): A list of file paths to the GRIB files.
+        codes (List[Union[VariableSingleLevel, VariablePressureLevel]]): A list of variable codes.
+
+    Returns:
+        xr.Dataset: A dataset containing the extracted variables from the GRIB files.
+
+    Raises:
+        AssertionError: If the number of variables is not the same as the number of arrays.
+
+    """
 
     # empty arrays
     arrays = [None] * len(codes)
