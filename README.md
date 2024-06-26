@@ -11,14 +11,14 @@ Currently, this needs to be installed by cloning the repo and installing the dep
 To clone the repo:
 
 ```bash
-gh repo clone jejjohnson/jbayesevt
+gh repo clone jejjohnson/ddf
 ```
 
 
 **HTTPS**
 
 ```bash
-git clone https://github.com/jejjohnson/jbayesevt.git
+git clone https://github.com/jejjohnson/ddf.git
 ```
 
 ***
