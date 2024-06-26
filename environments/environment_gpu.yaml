@@ -23,6 +23,7 @@ dependencies:
   # JAX
   - jaxlib
   - cuda-version      # pulling packages that are CUDA12 compatible
+  - jax==0.4.16
   # VISUALIZATION
   - cartopy
   - cmocean
