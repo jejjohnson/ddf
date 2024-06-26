@@ -1,7 +1,7 @@
 from typing import Tuple, List, Union
 import eccodes
 import numpy as np
-from ddf.variables.era5 import VARIABLE_CODES, VariableSingleLevel, VariablePressureLevel
+from ddf._src.variables.era5 import VARIABLE_CODES, VariableSingleLevel, VariablePressureLevel
 import xarray as xr
 
 
