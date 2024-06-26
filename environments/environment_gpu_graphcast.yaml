@@ -1,15 +1,9 @@
-name: ddp
+name: ddp_graphcast
 channels:
   - conda-forge
   - defaults
 dependencies:
-  - python=3.10
-  # - conda-forge::jupytext
-  # - conda-forge::jupyter-book
-  # - conda-forge::myst-parser
-  # - conda-forge::pre-commit
-  # - conda-forge::"nodejs>=20,<21"
-  # - conda-forge::mystmd
+  - python=3.11
   - conda-forge::regionmask
   - conda-forge::xarray
   # DATASETS
@@ -17,13 +11,6 @@ dependencies:
   - conda-forge::cf_xarray
   - conda-forge::intake-esm
   # STUFF
-  - cuda-libraries    # cuda meta-package
-  - cudnn             # specifically for cudnn
-  - cuda-nvcc         # compatible nvidia C compiler is available
-  # JAX
-  - jaxlib
-  - cuda-version      # pulling packages that are CUDA12 compatible
-  - jax
   # VISUALIZATION
   - cartopy
   - cmocean
@@ -51,8 +38,9 @@ dependencies:
       - onnxruntime-gpu
       - "ruamel.yaml<0.18.0"
       # GRAPHCAST Dependencies
-      # - git+https://github.com/deepmind/graphcast/archive/e622a15c1b9742d78f9b662f2af262604d58c204.tar.gz
-      - git+https://github.com/google-deepmind/graphcast.git
+      - "flax==0.7.3"
+      - "jax==0.4.16"
+      - "graphcast @ https://github.com/deepmind/graphcast/archive/e622a15c1b9742d78f9b662f2af262604d58c204.tar.gz"
       # Extra Stuff
       - loguru 
       - tqdm
