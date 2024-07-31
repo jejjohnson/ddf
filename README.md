@@ -11,7 +11,7 @@ Currently, this needs to be installed by cloning the repo and installing the dep
 To clone the repo:
 
 ```bash
-gh repo clone jejjohnson/ddf
+gh repo clone repo/repo
 ```
 
 
