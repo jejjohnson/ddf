@@ -3,23 +3,20 @@
 > Some notes and random codes that I use to try and understand how this whole data-drive weather forecasting works.
 > This is almost exclusively using the [Earth2MIP](https://nvidia.github.io/earth2mip/index.html) framework.
 
-
 ***
 ## Installation
 
 Currently, this needs to be installed by cloning the repo and installing the dependencies using conda.
-To clone the repo:
+
+First, we need to download the repo. 
+Go to this website (**HTTPS**):
 
 ```bash
-gh repo clone repo/repo
+https://anonymous.4open.science/r/ddf-FEA2/
 ```
 
+Now, download the repo and go into the repository.
 
-**HTTPS**
-
-```bash
-git clone https://github.com/jejjohnson/ddf.git
-```
 
 ***
 ### Conda (Recommended)
