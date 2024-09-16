@@ -3,6 +3,11 @@
 > Some notes and random codes that I use to try and understand how this whole data-drive weather forecasting works.
 > This is almost exclusively using the [Earth2MIP](https://nvidia.github.io/earth2mip/index.html) framework.
 
+***
+### Related Projects
+
+Some scripts from this repo were used in a climate-change attribution project found here: [Code](https://github.com/bernatj/ai-based-attribution) | [Paper](https://arxiv.org/abs/2408.16433)
+
 
 ***
 ## Installation
